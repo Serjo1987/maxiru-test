@@ -1,0 +1,160 @@
+.app {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+
+  .header,
+  ._content .seats,
+  ._content .calendar-cards .calendar {
+    padding: 15px 10px;
+  }
+
+  .header {
+    background: $lightBlack;
+  }
+
+  ._content,
+  .seats,
+  .calendar-cards {
+    height: calc(100vh - 71px);
+  }
+  ._content {
+    .seats-container,
+    .calendar {
+      background: $middleBlack;
+    }
+    .seats-container {
+      padding-top: 53px;
+
+      .seats {
+        width: 55px;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+  
+        .seat {
+          .number {
+            font-size: 50px;
+            font-weight: bold;
+            color: $defaultFontColor;
+          }
+          .description {
+            color: $greyFontColor;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+          }
+        }
+      }
+    }
+    .calendar-cards {
+      background: $darkBlack;
+
+      .calendar {
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+
+        .date {
+          display: inline-block;
+          width: 250px;
+          padding-left: 10px;
+
+          &:first-child {
+            &:before {
+              content: "\26AB";
+              color: $yellow;
+            }
+          }
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+      }
+      .cards {
+        padding: 10px;
+        position: relative;
+        overflow: auto;
+        white-space: nowrap;
+
+        .cards-list {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          .card {
+            display: inline-block;
+            background: $lightBlack;
+            border-radius: 4px;
+            width: 250px;
+  
+            &:not(:last-child) {
+              margin-right: 10px;
+            }
+  
+            .percents-nav,
+            .time-list {
+              padding: 15px;
+            }
+  
+            .percents-nav {
+              border-bottom: 1px solid $darkGreyFontColor;
+  
+              div {
+                position: relative;
+  
+                span {
+                  &:first-child {
+                    font-size: 60px;
+                    font-weight: bold;
+                  }
+                  &:last-child {
+                    position: absolute;
+                    top: 20px;
+                    right: -13px;
+                  }
+                  &._grey {
+                    color: $defaultFontColor;
+                  }
+                  &._green {
+                    color: $green;
+                  }
+                  &._yellow {
+                    color: $yellow;
+                  }
+                  &._red {
+                    color: $red;
+                  }
+                  &._orange {
+                    color: $orange;
+                  }
+                }
+              }
+            }
+            .time-list {
+              padding-bottom: 5px;
+  
+              a {
+                display: block;
+                padding: 10px 20px;
+                text-align: center;
+                border-radius: 4px;
+                color: $defaultFontColor;
+                font-weight: bold;
+                margin-bottom: 10px;
+  
+                &:hover,
+                &.active {
+                  background: $darkBlack;
+                  color: $greyFontColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

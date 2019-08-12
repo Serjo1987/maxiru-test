@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic);
+@import "_flex";
+
+$lightBlack: #323133;
+$middleBlack: #2A2A2B;
+$darkBlack: #262527;
+$defaultFontColor: #D4D4D4;
+$greyFontColor: #838283;
+$darkGreyFontColor: #808080;
+$yellow: #E8CE4D;
+$green: #9BE84D;
+$red: #E8614D;
+$orange: #E4914C;
+
+::-webkit-scrollbar {
+	width: 5px;
+	background: rgba(38,37,39,0.1);
+}
+::-webkit-scrollbar-track {
+	background: rgba(38,37,39,0.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(38,37,39,0.5);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(38,37,39,0.5);
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+html, body * {
+	box-sizing: border-box;
+	font-family: 'Roboto', 'sans serif', 'open sans';
+	font-weight: 400;
+	font-size: 16px;
+	color: $defaultFontColor;
+	text-decoration: none;
+	max-height: 999999px;
+}
+img.preloader {
+	display: block;
+	position: fixed;
+	height: 50px;
+	width: 50px;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -25px;
+}
+.content {
+	width: 90%;
+	min-width: 300px;
+	padding: 0;
+	margin: 0 auto;
+}
+a:hover {
+	outline: none;
+	text-decoration: none;
+	color: inherit;
+} 
+
+@import "_app";
